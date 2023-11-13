@@ -1,0 +1,164 @@
+$colors1: #4E89AE;
+$colors2: #43658B;
+$colors3: #ED6663;
+$colors4: #FFA372;
+
+
+//This code will declare a mix that gets two arguments, minimum width and maximum width.
+
+@mixin resolutions($minwidth, $maxwidth) {
+    @media screen and (min-width: $minwidth) and (max-width:$maxwidth){
+        @content
+    }
+}
+
+body {
+    background-color: #8CCFF7;
+    border: 0;
+}
+
+//@media will change the image and depending on the size of the screen will change the images.
+
+@media screen and (min-width: 801px) {
+    .image {
+        background-image: url("x400.png");
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 800px) {
+    .image {
+        background-image: url("x300.png");
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image {
+        background-image: url("x200.png");
+        width: 200px;
+        height: 200px;
+    }
+}
+
+//This code is for the header and the main part of the page
+
+.message {
+    color: #969696;
+    text-align: center;
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: right;
+    margin: auto;
+}
+
+//The code below is for main section of the website
+
+.rectangles {
+    background-color: #E2EFF1;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 55px;
+}
+
+.main {
+    padding-top: 50px;
+    padding-bottom: 55px;
+    height: 100%;
+}
+
+//Indicates what colors for the lines in the main part
+
+.rectangle1 {
+    background-color: $colors1;
+    height: 40px;
+    display: flex
+}
+
+.rectangle2 {
+    @extend .rectangle1;
+    background-color: $colors2;
+}
+
+.rectangle3 {
+    @extend .rectangle1;
+    background-color: $colors3;
+}
+
+.rectangle4 {
+    @extend .rectangle1;
+    background-color: $colors4;
+}
+
+.rectangle1:hover, .rectangle2:hover, .rectangle3:hover, .rectangle4:hover {
+    background-color: #434343;
+}
+
+//Indicates the color is used for the balls
+
+.ball1 {
+    background-color: $colors4;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    margin: 5px;
+}
+
+.ball2 {
+    @extend .ball1;
+    background-color: $colors3;
+    height: 90px;
+    width: 90px;
+    border-radius: 90px
+}
+
+.ball3 {
+    @extend .ball1;
+    background-color: $colors2;
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+}
+
+.ball4 {
+    @extend .ball1;
+    background-color: $colors1;
+    height: 70px;
+    width: 70px;
+    border-radius: 70px;
+}
+
+.ball1:hover, .ball2:hover, .ball3:hover, .ball4:hover {
+    background-color: #434343;
+}
+
+//Indicates flex on div with the class main-balls and it will change the way of the balls depending on the size of the screen
+
+.balls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    @include resolutions(620px, 1040px) {
+    flex-direction: column;
+    margin: auto;
+    }  
+    
+    @include resolutions(480px, 940px) {
+    flex-direction: column;
+    margin: auto;
+    }
+
+    @include resolutions(0px, 480px) {
+    flex-direction: column;
+    margin: auto;
+    }
+}

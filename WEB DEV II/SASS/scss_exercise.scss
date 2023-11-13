@@ -1,0 +1,27 @@
+$fontfamily: Helvetica, sans-serif;
+$bgcolor: pink;
+$textsize: 35px;
+
+h1{
+    font-family: $fontfamily;
+    font-size: $textsize;
+
+}
+
+p{
+    font-size: $textsize;
+    background-color: $bgcolor;
+    font-family: $fontfamily;
+
+}
+
+ul{
+    background-color: black;
+    font-family: $fontfamily;
+    font-size: 20px;
+}
+
+.footer{
+    font-family: $fontfamily;
+    background-color: lightblue;
+}

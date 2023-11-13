@@ -1,0 +1,21 @@
+h1 {
+  font-family: Helvetica, sans-serif;
+  font-size: 35px;
+}
+
+p {
+  font-size: 35px;
+  background-color: pink;
+  font-family: Helvetica, sans-serif;
+}
+
+ul {
+  background-color: black;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.footer {
+  font-family: Helvetica, sans-serif;
+  background-color: lightblue;
+}/*# sourceMappingURL=scss_exercise.css.map */

@@ -1,0 +1,199 @@
+/*Flex elements in header style include align-items.*/
+header{
+    background-color: #2196F3;
+    display: flex;
+    color: white; 
+    padding: 15px;
+    height: 35px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* To remove uneccessary white lines*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*Link style is removed, and the appearance is restored to a more natural look.*/
+a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+}
+
+/*Body font.*/
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    background-color: rgba(197, 196, 196, 0.527);
+}
+
+/*Heading style*/
+h1{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+/*Just width and padding are used for searchbar style.*/
+input[type=text]{
+    width: 15rem;
+    padding: 15px;
+}
+
+/*boxes padding.*/
+.boxes{
+    padding: 10px;
+}
+
+/*Paragraph styling.*/
+p{
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: rgb(88, 87, 87);
+}
+
+/*Heading 2 styling.*/
+h2{
+    font-size:medium;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 5px ;
+}
+
+/*Button styling*/
+button{
+    font-size: 10px;
+    background-color: #2196F3; 
+    border: none;
+    padding: 7px;
+    color: white;
+    border-radius: 4px;
+    float: right;
+    margin-top: 5px;
+    
+}
+
+/*Adding border to the divs.*/
+.Endgame, .little_box {
+    border: 1px solid rgba(167, 167, 167, 0.233);
+    box-shadow: 1px 1px #8888884f;
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    padding-bottom: 3rem ;
+}
+
+/*For the picture to fill the screen.*/
+.img{
+    width: 100%;
+}
+
+/*This will also aim for 480 pixels, which is the necessary goal, if the screen is less than 800 pixels.*/
+@media screen and (max-width:799px){
+    /*Removing searchbar for smaller screens.*/
+    input[type=text]{
+        display: none;
+    }
+}
+
+/*When the screen is atleast 800px.*/
+@media screen and (min-width:800px){
+    /*Display flex with wrap.*/
+    .boxes{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /*Giving the big div a width*/
+    .Endgame{
+        width: 100%;
+    }
+
+    /*The small boxes with its width and margin.*/
+    .little_box{
+        width: 44.5%;
+
+    }
+}
+
+/*When screen is atleast 1024px*/
+@media screen and (min-width:1024px){
+    /*Adding a flex direction.*/
+    .boxes{
+        flex-direction: column;
+    }
+
+    /*Reduce the large div's width.*/
+    .Endgame{
+        width: 61%;
+    }
+
+    /*Reduce the little divs' width and align them better.*/
+    .little_box{
+        width: 30%;
+        align-self: flex-end;
+        margin-right: 10px;
+        transform: translate(0, -68%); /*to manually align the little boxes with the large div.*/
+    }
+
+    /*Margin was added to the footer because the change caused the pre-established footer margin to be disturbed.*/
+    .footer{
+        margin-top: -45rem;
+        margin-bottom: 1rem;
+        bottom: 0;
+    }
+}
+
+/*When screen is at least 1150px, which also targets 1280px.*/
+@media screen and (min-width:1150px){
+    /*Change flex direction to row.*/
+    .boxes{
+        flex-direction: row;
+    }
+
+    /*shrinking the div and increasing the alignment margin.*/
+    .Endgame{
+        width: 46%;
+        margin-right: 10px;
+    }
+
+    /*shrinking tiny divs in size*/
+    .little_box{
+        width: 21%;
+        align-self:normal; /*Aligning self to normal, from flex-end*/
+        margin-right: 10px;
+        transform: translate(0, 0); /*Transform translate is being removed from the previous media query.*/
+        height: 100%;
+    }
+
+    /*Manually adjusting the columns.*/
+    #down{
+        transform: translate(209%, 0);
+        margin-top: -13.7%;
+    }
+
+    /*Reverting footer style back to normal.*/
+    .footer{
+        margin-top: 0px;
+        margin-bottom: 2rem;
+        bottom: 0;
+    }
+}
+
+/*When the screen is more than 1280*/
+@media screen and (min-width:1281px){
+    /*Just added padding to left and right.*/
+    .boxes{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}
+
+/*Footer styling, alignment and margins.*/
+.footer{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    bottom: 0;
+}

@@ -1,0 +1,44 @@
+$default-color: grey;
+$warm-color: red;
+$cool-color: blue;
+$pastel-color: lightpink;
+$light-color: violet;
+
+.Smallest-div{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: $default-color;
+    color: white;
+}
+
+.Small-div{
+    @extend .Smallest-div;
+    background-color: $warm-color;
+    width: 200px;
+    height: 200px;
+}
+
+.Medium-div{
+    @extend .Smallest-div;
+    background-color: $cool-color;
+    width: 300px;
+    height: 300px;
+}
+
+.Big-div{
+    @extend .Smallest-div;
+    background-color: $pastel-color;
+    width: 400px;
+    height: 400px;
+}
+
+.Biggest-div{
+    @extend .Smallest-div;
+    background-color: $light-color;
+    width: 500px;
+    height: 500px;
+}

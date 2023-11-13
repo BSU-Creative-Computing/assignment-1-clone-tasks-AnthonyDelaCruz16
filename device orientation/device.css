@@ -1,0 +1,28 @@
+body{ 
+    width: 100vw;
+    margin: 0;
+}
+/*Viewport Width (vw). This unit is based on the width of the viewport.
+    A value of 1vw is equal to 1% of the viewport width. Viewport Minimum (vmin).
+     This unit is based on the smaller dimensions of the viewport.*/
+
+#banner {
+      height: 150px;
+      background-color: #aaceff;
+}
+
+/* Option 1 - focuses on the width of the device in landscape, which is the height of the device output.*/
+
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+      #banner {
+            height: 70px;
+      }
+}    
+
+@media screen and (max-height: 480px) and (orientation: landscape) {
+      #banner {
+             height: 70px;
+      }
+    
+}

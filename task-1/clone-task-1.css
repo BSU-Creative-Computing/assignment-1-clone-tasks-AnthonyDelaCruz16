@@ -1,0 +1,80 @@
+/* Media query, for when the screen is more than 1024px.*/
+@media screen and (min-width:1024px){
+    .img{
+        width: 33.33%;
+        float: left;
+        height: auto;
+    }
+
+    body{
+    margin: 5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Media query, when the screen is on 1024px.*/
+@media screen and (min-width:1024px){
+    .img{
+        width: 33.33%;
+        float: inline-start;
+        height: auto;
+    }
+}
+
+/* Media query, when the screen is on 800px or more.*/
+@media screen and (min-width:800px){
+   .img{
+        width: 50%;
+        float: inline-start;
+        height: auto;
+    }
+}
+
+/* Media query, when the screen in 480px or more.*/
+@media screen and (min-width:480px){
+    .img{
+        width: 100%;
+        float: left;
+        height: auto;
+    }
+}
+
+/* In order to pick the font style that would be used in the entire webpage.*/
+body{
+    font-family: monospace;
+}
+
+/* In order to style the paragraph, add a padding.*/
+p{
+    padding: 10px;
+}
+
+/*For the style of the logo, to decrease it, and the individual padding and margin.*/
+.logo{
+    margin-left: 10px;
+    margin-top: 10px;
+    height:50px;
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* In order to remove unnecessary white spaces.*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+}
+
+/* Footer styling is used for the background color, colors, align, and other formatting choices.*/
+footer{
+    text-align: center;
+    background-color:rgb(18, 21, 27) ;
+    color: white;
+    margin-top: 10px;
+    padding-top: 20px;
+    height: 2rem;
+}

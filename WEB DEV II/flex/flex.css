@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+
+}
+
+header {
+    background-color: lightblue;
+    height: 100px;
+}
+h1 { 
+    text-align:center;
+  
+}
+
+article {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightpink;
+}
+
+footer { 
+    text-align:center;
+    background-color: lightblue;
+
+}
+section {
+    display: flex;
+}
+
